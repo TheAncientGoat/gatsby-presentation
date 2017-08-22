@@ -1,3 +1,10 @@
+.left{ float: left; }
+.right{ float: right; }
+.nav {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -84,6 +91,7 @@ sup {
 }
 img {
   border-style: none;
+  max-height: 70vh;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -512,6 +520,8 @@ th {
 }
 li {
   margin-bottom: calc(1.45rem / 2);
+  font-size: 30px;
+  font-family: Helvetica;
 }
 ol li {
   padding-left: 0;

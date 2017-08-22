@@ -6,7 +6,19 @@
   "dependencies": {
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
-    "gatsby-plugin-react-helmet": "^1.0.3"
+    "gatsby-plugin-react-helmet": "^1.0.1",
+    "gatsby-plugin-manifest": "^1.0.1",
+    "gatsby-plugin-offline": "^1.0.1",
+    "gatsby-plugin-preact": "^1.0.1",
+    "gatsby-plugin-sharp": "^1.0.1",
+    "gatsby-remark-copy-linked-files": "^1.0.1",
+    "gatsby-remark-prismjs": "^1.0.1",
+    "gatsby-remark-responsive-iframe": "^1.0.1",
+    "gatsby-remark-responsive-image": "next",
+    "gatsby-remark-smartypants": "^1.0.1",
+    "gatsby-source-filesystem": "^1.0.1",
+    "gatsby-transformer-remark": "^1.0.1",
+    "gatsby-transformer-sharp": "^1.0.1"
   },
   "keywords": [
     "gatsby"
@@ -20,6 +32,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-react": "^7.3.0",
     "prettier": "^1.5.2"
   }
 }

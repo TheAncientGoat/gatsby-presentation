@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import SlideNav from '../components/slidenav'
+
 import './index.css'
 
-const Header = () =>
+const Header = () => (
   <div
     style={{
       background: 'rebeccapurple',
@@ -27,16 +29,17 @@ const Header = () =>
             textDecoration: 'none',
           }}
         >
-          Gatsby
+          Gatsby - A Quick Tour
         </Link>
       </h1>
     </div>
   </div>
+)
 
 const TemplateWrapper = ({ children }) =>
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="An intro to Gatsby"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -53,6 +56,7 @@ const TemplateWrapper = ({ children }) =>
     >
       {children()}
     </div>
+        <SlideNav />
   </div>
 
 TemplateWrapper.propTypes = {
