@@ -3,12 +3,14 @@ const Promise = require("bluebird")
 const path = require("path")
 const select = require(`unist-util-select`)
 const precache = require(`sw-precache`)
+const gsf = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
     const pages = []
+
     const slide = path.resolve("src/templates/slide.js")
     graphql(
       `
@@ -27,6 +29,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       `
     ).then(result => {
+        console.log(result)
       if (result.errors) {
         console.log(result.errors)
         resolve()
@@ -54,20 +57,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 // Add custom url pathname for blog posts.
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
-
-  if (node.internal.type === `File`) {
-    const parsedFilePath = path.parse(node.absolutePath)
-    const slug = `/${parsedFilePath.dir.split("---")[1]}/`
-    createNodeField({ node, name: `slug`, value: slug })
-  } else if (
-    node.internal.type === `MarkdownRemark` &&
-    typeof node.slug === "undefined"
-  ) {
-    const fileNode = getNode(node.parent)
-    createNodeField({
-      node,
-      name: `slug`,
-      value: fileNode.fields.slug,
-    })
-  }
+    if (node.internal.type === `MarkdownRemark`) {
+        const slug = gsf.createFilePath({ node, getNode, basePath: `pages` })
+        console.log(slug)
+        createNodeField({
+            node,
+            name: `slug`,
+            value: slug,
+        })
+        console.log(node)
+    }
 }

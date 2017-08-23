@@ -6,18 +6,18 @@
   "dependencies": {
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
-    "gatsby-plugin-react-helmet": "^1.0.1",
     "gatsby-plugin-manifest": "^1.0.1",
     "gatsby-plugin-offline": "^1.0.1",
     "gatsby-plugin-preact": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^1.0.1",
     "gatsby-plugin-sharp": "^1.0.1",
     "gatsby-remark-copy-linked-files": "^1.0.1",
     "gatsby-remark-prismjs": "^1.0.1",
     "gatsby-remark-responsive-iframe": "^1.0.1",
     "gatsby-remark-responsive-image": "next",
     "gatsby-remark-smartypants": "^1.0.1",
-    "gatsby-source-filesystem": "^1.0.1",
-    "gatsby-transformer-remark": "^1.0.1",
+    "gatsby-source-filesystem": "^1.4.4",
+    "gatsby-transformer-remark": "^1.7.2",
     "gatsby-transformer-sharp": "^1.0.1"
   },
   "keywords": [

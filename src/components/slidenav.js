@@ -15,6 +15,7 @@ class SlideNav extends React.Component {
     }
 
     componentWillMount() {
+        if(!document) {return}
         document
             .addEventListener(
                 "keydown",
@@ -24,6 +25,7 @@ class SlideNav extends React.Component {
     }
 
     componentWillUnmount() {
+        if(!document) {return}
         document
             .removeEventListener(
                 "keydown",

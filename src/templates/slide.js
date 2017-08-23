@@ -1,11 +1,10 @@
 import React from 'react'
 
-const SlideRoute = (props) => {//{data: { markDownRemark }}) => {
-console.warn(props)
+const SlideRoute = ({data: { markdownRemark } = {data: {markdownRemark: {}}}}) => {
 return (
     <div
         dangerouslySetInnerHTML={
-            { __html: props.data.markdownRemark.html }}
+            { __html: markdownRemark.html }}
     />
 )
 }
@@ -21,9 +20,6 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt
-      frontmatter {
-        title
-      }
     }
   }
 `
