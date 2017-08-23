@@ -1,0 +1,2 @@
+webpackJsonp([0x717e664093664400],{"./node_modules/json-loader/index.js!./.cache/json/8.json":function(t,e){t.exports={data:{site:{siteMetadata:{title:"An intro to Gatsby"}},markdownRemark:{html:"<h1>Thanks!</h1>\n<h2>Questions?</h2>",excerpt:"Thanks! Questions?"}},pathContext:{slug:"/8/"}}}});
+//# sourceMappingURL=path---8-eca549c5f0d669db41b2.js.map
