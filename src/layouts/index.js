@@ -55,8 +55,8 @@ const TemplateWrapper = ({ children }) =>
       }}
     >
       {children()}
-    </div>
-        <SlideNav />
+</div>
+ <SlideNav />
   </div>
 
 TemplateWrapper.propTypes = {

@@ -12,10 +12,14 @@ class SlideNav extends React.Component {
     constructor() {
         super()
         this._handleKeyDown = this._handleKeyDown.bind(this)
+        this.state = { nextSlide: ()=>{}, prevSlide: ()=>{}}
     }
 
-    componentWillMount() {
-        if(!document) {return}
+    componentDidMount() {
+        this.setState(
+            {nextSlide, prevSlide}
+        )
+
         document
             .addEventListener(
                 "keydown",
@@ -38,11 +42,11 @@ class SlideNav extends React.Component {
         switch( event.keyCode ) {
             case 37: // left
                 console.warn(this.props)
-                this.props.history.push('/' + prevSlide())
+                this.props.history.push('' + prevSlide())
                 break;
             case 39: // right
             case 38: // up
-                this.props.history.push('/' + nextSlide())
+                this.props.history.push('' + nextSlide())
                 break;
             default:
                 break;
@@ -60,10 +64,10 @@ class SlideNav extends React.Component {
                     marginTop: '1.45rem',
                     background: 'rebeccapurple',
                 }}>
-                <Link to={prevSlide()} className="nav left">
+                <Link to={this.state.prevSlide()} className="nav left">
                     Prev
                 </Link>
-                <Link to={nextSlide()} className="nav right">
+                <Link to={this.state.nextSlide()} className="nav right">
                     Next
                 </Link>
             </div>

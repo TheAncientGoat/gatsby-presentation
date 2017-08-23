@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: `/gatsby-presentation`,
     siteMetadata: {
         title: `An intro to Gatsby`,
     },
