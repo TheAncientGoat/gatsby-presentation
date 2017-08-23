@@ -1,0 +1,2 @@
+webpackJsonp([0x4a6b21ec48162c00],{"./node_modules/json-loader/index.js!./.cache/json/5.json":function(e,a){e.exports={data:{site:{siteMetadata:{title:"An intro to Gatsby"}},markdownRemark:{html:"<h1>How does Gatsby do it?</h1>\n<ul>\n<li>Data source ></li>\n<li>Transformer ></li>\n<li>Template ></li>\n<li>Layout ></li>\n<li>Plugins ></li>\n<li>Webpack</li>\n</ul>",excerpt:"How does Gatsby do it? Data source > Transformer > Template > Layout > Plugins > Webpack"}},pathContext:{slug:"/5/"}}}});
+//# sourceMappingURL=path---5-40ba9c0e08202e017f7c.js.map
